@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Intervention Checklist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f8f9fa;
+            background-image: radial-gradient(rgba(0, 0, 255, 0.1) 10%, transparent 10%),
+                              radial-gradient(rgba(0, 0, 255, 0.1) 10%, transparent 10%);
+            background-position: 0 0, 50px 50px;
+            background-size: 100px 100px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        input[type="checkbox"] {
+            accent-color: blue;
+        }
+        .response-container {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            document.body.innerHTML = '<h1>Your response has been recorded.</h1>' +
+                                      '<div class="response-container"><button onclick="window.location.reload()">Submit another response</button></div>';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>POSSIBLE AREAS FOR INTERVENTION</h1>
+        <form onsubmit="submitForm(event)">
+            <label for="companyName"><b>Company Name:</b></label>
+            <input type="text" id="companyName" name="companyName" placeholder="Enter company name" required>
+            
+            <label for="industryType"><b>Industry Type:</b></label>
+            <select id="industryType" name="industryType" required>
+                <option value="">Select Industry</option>
+                <option value="food">Food</option>
+                <option value="non-food">Non-Food</option>
+            </select>
+            
+            <table>
+                <tr>
+                    <th>Management</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td rowspan="8" style="text-align: center; vertical-align: middle;"><b>Management & Admin Functions:</b></td>
+                    <td><input type="checkbox"> Organizational Structure</td>
+                </tr>
+                <tr><td><input type="checkbox"> Documented rules and regulations with disciplinary action</td></tr>
+                <tr><td><input type="checkbox"> Job Descriptions</td></tr>
+                <tr><td><input type="checkbox"> Personnel hiring, performance appraisal and 201 file</td></tr>
+                <tr><td><input type="checkbox"> Records management</td></tr>
+                <tr><td><input type="checkbox"> Benefits and Compensation</td></tr>
+                <tr><td><input type="checkbox"> Formulation of VMGO</td></tr>
+                <tr><td><input type="checkbox"> KPI's <input type="text" placeholder="Enter KPI details"></td></tr>
+                <tr>
+                    <th>Trainings</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td rowspan="9" style="text-align: center; vertical-align: middle;"><b>Trainings</b></td>
+                    <td><input type="checkbox"> GMP training</td>
+                </tr>
+                <tr><td><input type="checkbox"> GWP training</td></tr>
+                <tr><td><input type="checkbox"> Total Preventive Maintenance Training</td></tr>
+                <tr><td><input type="checkbox"> BOSH training</td></tr>
+                <tr><td><input type="checkbox"> PPC training</td></tr>
+                <tr><td><input type="checkbox"> Product Costing Training</td></tr>
+                <tr><td><input type="checkbox"> 5S training</td></tr>
+                <tr><td><input type="checkbox"> GAP</td></tr>
+                <tr><td><input type="checkbox"> GAHP</td></tr>
+            </table>
+
+            <!-- Add some space after the Trainings section -->
+            <div class="training-space"></div>
+
+            <table>
+                <tr>
+                    <th>Technical</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td rowspan="9" style="text-align: center; vertical-align: middle;"><b>Production System:</b></td>
+                    <td><input type="checkbox"> Work Instruction and documentation</td>
+                </tr>
+                <tr><td><input type="checkbox"> Production Planning and Control</td></tr>
+                <tr><td><input type="checkbox"> Capacity Utilization</td></tr>
+                <tr><td><input type="checkbox"> Work Methods Enhancement</td></tr>
+                <tr><td><input type="checkbox"> Process and Product Standardization</td></tr>
+                <tr><td><input type="checkbox"> Quality Control and Assurance</td></tr>
+                <tr><td><input type="checkbox"> Process/Improvement</td></tr>
+                <tr><td><input type="checkbox"> Work Organization</td></tr>
+                <tr><td><input type="checkbox"> Production Monitoring and Control</td></tr>
+                <tr>
+                    <td rowspan="3" style="text-align: center; vertical-align: middle;"><b>Materials Management</b></td>
+                    <td><input type="checkbox"> Control and documentation</td>
+                </tr>
+                <tr><td><input type="checkbox"> Inventory Monitoring</td></tr>
+                <tr><td><input type="checkbox"> Materials utilization maximization</td></tr>
+                <tr>
+                    <td rowspan="3" style="text-align: center; vertical-align: middle;"><b>Machineries and Equipment</b></td>
+                    <td><input type="checkbox"> Equipment upgrade and acquisition</td>
+                </tr>
+                <tr><td><input type="checkbox"> Preventive maintenance system</td></tr>
+            </table>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+   
